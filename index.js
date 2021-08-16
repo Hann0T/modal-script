@@ -9,10 +9,6 @@ openModalButtons.forEach((button) => {
         const modal = document.querySelector(button.dataset.modalTarget);
         openModal(modal);
     });
-    // button.addEventListener("touchstart", (ev) => {
-    //     console.log("click");
-    //     ev.preventDefault();
-    // });
 });
 
 closeModalButtons.forEach((button) => {
