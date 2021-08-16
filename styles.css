@@ -1,40 +1,40 @@
-.modal {
+.modal-custom {
     position: fixed;
-    margin: auto;
-    inset: 0;
+    top: 50%;
+    left: 50%;
     background-color: white;
     border: 1px solid black;
     border-radius: 20px;
     box-sizing: border-box;
-    padding: 20px;
-    max-height: 50%;
+    padding: 20px 10px 20px 20px;
+    height: 80vh;
+    width: 500px;
     max-width: 80%;
     z-index: 200;
-    transform: scale(0);
+    transform: translate(-50%, -50%) scale(0);
     transition: transform 200ms ease-in-out;
     overflow-y: hidden;
 }
-.modal.active {
-    transform: scale(1);
+.modal-custom.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-custom__wrapper {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    max-height: 100%;
 }
 
-.modal__header {
+.modal-custom__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.modal__title {
+.modal-custom__title {
     margin: 0;
 }
 
-.modal__content {
-    /* max-height: 308px; */
-    height: 100%;
-    overflow-y: scroll;
-}
-
-#closeModal {
+#closeModal-custom {
     font-size: 25px;
     font-weight: bold;
     background-color: transparent;
@@ -42,7 +42,7 @@
     cursor: pointer;
 }
 
-#overlay {
+#overlay-custom {
     position: fixed;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.5);
@@ -51,7 +51,7 @@
     opacity: 0;
 }
 
-#overlay.active {
+#overlay-custom.active {
     opacity: 1;
     pointer-events: all;
 }

@@ -1,6 +1,6 @@
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
-const closeModalButtons = document.querySelectorAll("#closeModal");
-const overlay = document.getElementById("overlay");
+const closeModalButtons = document.querySelectorAll("#closeModal-custom");
+const overlay = document.getElementById("overlay-custom");
 
 // Fix the touch event
 
@@ -13,13 +13,13 @@ openModalButtons.forEach((button) => {
 
 closeModalButtons.forEach((button) => {
     button.addEventListener("click", () => {
-        const modal = button.closest(".modal");
+        const modal = button.closest(".modal-custom");
         closeModal(modal);
     });
 });
 
 overlay.addEventListener("click", () => {
-    const modals = document.querySelectorAll(".modal.active");
+    const modals = document.querySelectorAll(".modal-custom.active");
     modals.forEach((modal) => {
         closeModal(modal);
     });
